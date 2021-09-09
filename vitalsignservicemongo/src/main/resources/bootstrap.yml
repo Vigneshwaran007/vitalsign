@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Healthcare-Management-VitalSignMongo-API
+  cloud:
+    config: 
+      uri: http://localhost:8888
+    consul:
+      host: localhost
+      port: 8500
+    vault:
+      scheme: http
+      kv: 
+        enabled: true
+      uri: http://localhost:8200
+      token: s.VDfF2zZ7I11KF1vC7r43Z8xk 
+server:
+  port: 8090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,beans,env,refresh
